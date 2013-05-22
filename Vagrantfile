@@ -1,16 +1,9 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+# vapur-machine1 - vagrant file.
 
 Vagrant::Config.run do |config|
-  # All Vagrant configuration is done here. The most common configuration
-  # options are documented and commented below. For a complete reference,
-  # please see the online documentation at vagrantup.com.
-
-  # Every Vagrant virtual environment requires a box to build off of.
   config.vm.box = "pplabs_ubuntu12.04.2"
-
-  # The url from where the 'config.vm.box' box will be fetched if it
-  # doesn't already exist on the user's system.
   config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box"
 
   # Boot with a GUI so you can see the screen. (Default is headless)
@@ -43,8 +36,7 @@ Vagrant::Config.run do |config|
   config.vm.provision :puppet do |puppet|
      puppet.module_path = "puppet/modules"
      puppet.manifests_path = "puppet"
-     puppet.manifest_file  = "uraps.pp"
-  end
-  
-  
+     puppet.manifest_file = "vapur-machine1.pp"
+     puppet.options = "--hiera_config /vagrant/hiera.yaml"
+  end  
 end
