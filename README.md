@@ -1,9 +1,9 @@
 # Vapur-machine1
 
-This is my first Virtual Machine template created using Vagrant and Puppet. The main goal is to automate the creation of Virtual Machines (VM's),
+This is a Virtual Machine template created using Vagrant and Puppet. The main goal is to automate the creation of Virtual Machines (VM's),
 which will be used as isolated enviroments for developing web applications using Linux, Apache and Ruby.
 
-I named it Vapur:
+It's named Vapur:
 
 Va - from Vagrant.
 Pu - from Puppet.
