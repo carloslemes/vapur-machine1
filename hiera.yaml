@@ -1,0 +1,3 @@
+# hiera.yaml
+# This file is left blank on purpose, as I'm not using it yet. 
+# It is here just to avoid warnings when puppet runs.
